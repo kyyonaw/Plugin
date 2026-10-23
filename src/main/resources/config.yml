@@ -1,0 +1,94 @@
+# ============================================================
+#  DojutsuMarca - configuración
+#  Los glifos (...) vienen del resource pack incluido.
+#  Efectos: NOMBRE:NIVEL (nivel 0 = I). Acepta nombres nuevos o viejos
+#  (STRENGTH, SLOWNESS, RESISTANCE, HASTE, JUMP_BOOST, etc.).
+# ============================================================
+
+prefijo: "§8[§cDojutsu§8] §7"
+resetear-desgaste-al-morir: true
+
+dojutsus:
+  sharingan:
+    nombre: "Sharingan"
+    glifo-grande: ""      # cinemática (ojos en pantalla)
+    glifo-icono: ""       # icono pequeño del HUD
+    cinematica-ticks: 30
+    sonido: BLOCK_BEACON_ACTIVATE
+    particula: FLAME
+    duracion-max: 120           # segundos activo antes de agotarse (0 = infinito)
+    enfriamiento: 20            # segundos para volver a usarlo
+    dano-recibido: 0.92         # multiplicador de daño recibido
+    resaltar-radio: 0           # >0: hace brillar a los seres cercanos (los ve todo el mundo)
+    efectos: [NIGHT_VISION:0, SPEED:0]
+  mangekyo:
+    nombre: "Mangekyō"
+    glifo-grande: ""
+    glifo-icono: ""
+    cinematica-ticks: 40
+    sonido: ENTITY_WARDEN_SONIC_CHARGE
+    particula: SOUL_FIRE_FLAME
+    duracion-max: 60
+    enfriamiento: 60
+    dano-recibido: 0.85
+    resaltar-radio: 0
+    efectos: [NIGHT_VISION:0, SPEED:1, STRENGTH:0]
+  mangekyo_flor:
+    nombre: "Mangekyō Flor"      # renombralo como quieras
+    glifo-grande: ""
+    glifo-icono: ""
+    cinematica-ticks: 50
+    sonido: ENTITY_WARDEN_SONIC_CHARGE
+    particula: SOUL_FIRE_FLAME
+    duracion-max: 45
+    enfriamiento: 90
+    dano-recibido: 0.8
+    resaltar-radio: 0
+    efectos: [NIGHT_VISION:0, SPEED:1, STRENGTH:1]
+  byakugan:
+    nombre: "Byakugan"
+    glifo-grande: ""
+    glifo-icono: ""
+    cinematica-ticks: 30
+    sonido: BLOCK_AMETHYST_BLOCK_CHIME
+    particula: END_ROD
+    duracion-max: 90
+    enfriamiento: 30
+    dano-recibido: 1.0
+    resaltar-radio: 20
+    efectos: [NIGHT_VISION:0]
+  rinnegan:
+    nombre: "Rinnegan"
+    glifo-grande: ""
+    glifo-icono: ""
+    cinematica-ticks: 45
+    sonido: BLOCK_END_PORTAL_SPAWN
+    particula: ENCHANTMENT_TABLE
+    duracion-max: 45
+    enfriamiento: 90
+    dano-recibido: 0.8
+    resaltar-radio: 0
+    efectos: [RESISTANCE:1, SLOW_FALLING:0, NIGHT_VISION:0]
+
+marca:
+  nombre: "Marca"
+  vineta: ""              # overlay oscuro con venas (transformación)
+  glifo-etapa:
+    1: ""
+    2: ""
+  sonido: BLOCK_SCULK_SHRIEKER_SHRIEK
+  particula: SOUL_FIRE_FLAME
+  cinematica-ticks: 40
+  recuperacion-por-segundo: 0.15   # desgaste que se recupera cuando está inactiva
+  bloqueo-desgaste: 90             # con este desgaste o más no se puede activar
+  penalizacion-segundos: 20        # castigo al llegar a 100%
+  etapas:
+    1:
+      desgaste-por-segundo: 0.4
+      dano-recibido: 0.9
+      efectos: [STRENGTH:0, SPEED:0]
+    2:
+      desgaste-por-segundo: 1.0
+      dano-recibido: 0.75
+      efectos: [STRENGTH:1, SPEED:1, RESISTANCE:0]
+      rayo-visual: true            # rayo sin daño al transformarse
